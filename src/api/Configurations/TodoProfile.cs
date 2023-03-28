@@ -1,16 +1,15 @@
-using api.DataAccess;
-using api.Dtos;
-
 using AutoMapper;
 
-namespace api.Configurations;
+using Todo.Api.Dtos;
+
+namespace Todo.Api.Configurations;
 
 public class TodoProfile : Profile
 {
     public TodoProfile()
     {
-        CreateMap<Todo, TodoDto>().ReverseMap();
-        CreateMap<TodoForCreationDto, Todo>();
-        CreateMap<TodoForUpdateDto, Todo>();
+        CreateMap<DataAccess.Todo, TodoDto>().ReverseMap();
+        CreateMap<TodoForCreationDto, DataAccess.Todo>();
+        CreateMap<TodoForUpdateDto, DataAccess.Todo>();
     }
 }

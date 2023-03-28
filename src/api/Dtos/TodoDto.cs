@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace api.Dtos;
+namespace Todo.Api.Dtos;
 
 public class TodoDto
 {

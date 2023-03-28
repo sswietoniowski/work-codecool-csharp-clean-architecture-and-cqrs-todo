@@ -1,11 +1,13 @@
-using api.Configurations;
 using api.DataAccess;
-using api.Dtos;
-using api.Services;
 
 using Polly;
 
 using Microsoft.EntityFrameworkCore;
+
+using Todo.Api.Configurations;
+using Todo.Api.DataAccess;
+using Todo.Api.Dtos;
+using Todo.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

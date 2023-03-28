@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "src\api\api.csproj", "{AB0A6DA9-3DB8-4DB1-B09D-D30EDF7FDAF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "src\api\Todo.Api.csproj", "{AB0A6DA9-3DB8-4DB1-B09D-D30EDF7FDAF1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4AD96F84-4704-4DE6-9CB6-550E6DBDD047}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{91D16156-43F7-4EEE-AEC0-72FE1052940C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api.Tests", "tests\UnitTests\api.Tests\api.Tests.csproj", "{85E4164B-5452-488D-8D23-29EFBB87C335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Api.Tests", "tests\UnitTests\api.Tests\Todo.Api.Tests.csproj", "{85E4164B-5452-488D-8D23-29EFBB87C335}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

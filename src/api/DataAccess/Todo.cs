@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 
-namespace api.DataAccess;
+namespace Todo.Api.DataAccess;
 
 public class Todo
 {

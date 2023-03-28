@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿#nullable disable
 
-#nullable disable
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace api.DataAccess.Migrations.Sqlite
+namespace Todo.Api.DataAccess.Migrations.Sqlite
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration

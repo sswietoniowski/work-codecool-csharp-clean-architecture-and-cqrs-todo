@@ -1,4 +1,4 @@
-namespace api.Configurations;
+namespace Todo.Api.Configurations;
 
 public enum DatabaseEngine
 {

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace api.DataAccess;
+namespace Todo.Api.DataAccess;
 
 public abstract class BaseTodoContext : DbContext
 {

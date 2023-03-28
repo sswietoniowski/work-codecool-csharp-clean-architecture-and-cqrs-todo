@@ -1,4 +1,4 @@
-﻿namespace api.DataAccess;
+﻿namespace Todo.Api.DataAccess;
 
 public interface ITodoRepository
 {
