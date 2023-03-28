@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Todo.Api.DataAccess.Migrations.Mssql
+namespace TodoApp.Api.DataAccess.Migrations.Mssql
 {
     [DbContext(typeof(MssqlTodoContext))]
     [Migration("20221212110018_InitialMigration")]

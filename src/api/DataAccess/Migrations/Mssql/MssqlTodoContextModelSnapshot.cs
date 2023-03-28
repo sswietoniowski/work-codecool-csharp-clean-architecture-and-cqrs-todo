@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-using Todo.Api.DataAccess;
+using TodoApp.Api.DataAccess;
 
 #nullable disable
 

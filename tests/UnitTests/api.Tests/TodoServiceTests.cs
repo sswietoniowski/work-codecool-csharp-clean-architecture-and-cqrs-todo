@@ -1,15 +1,20 @@
 ﻿using AutoFixture;
+
 using AutoMapper;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+
 using Moq;
-using Todo.Api.Configurations;
-using Todo.Api.DataAccess;
-using Todo.Api.Dtos;
-using Todo.Api.Services;
+
+using TodoApp.Api.Configurations;
+using TodoApp.Api.DataAccess;
+using TodoApp.Api.Dtos;
+using TodoApp.Api.Services;
+
 using Xunit.Abstractions;
 
-namespace Todo.Api.Tests;
+namespace TodoApp.Api.Tests;
 
 public class TodoServiceTests
 {
@@ -27,7 +32,7 @@ public class TodoServiceTests
         var todoRepository = new DummyTodoRepository(); // <- Dummy
 
         // manual mapping
-        var config = new MapperConfiguration(cfg => cfg.CreateMap<DataAccess.Todo, TodoDto>());
+        var config = new MapperConfiguration(cfg => cfg.CreateMap<Todo, TodoDto>());
         var mapper = new Mapper(config);
 
         var todoService = new TodoService(todoRepository, mapper);
@@ -76,7 +81,7 @@ public class TodoServiceTests
     public async Task GetTodoItems_ReturnsAllTodoItems_Mock()
     {
         // Arrange
-        var config = new MapperConfiguration(cfg => cfg.CreateMap<DataAccess.Todo, TodoDto>());
+        var config = new MapperConfiguration(cfg => cfg.CreateMap<Todo, TodoDto>());
         var mapper = new Mapper(config);
 
         var todoRepositoryMock = new Mock<ITodoRepository>(); // <- Mock
@@ -84,11 +89,11 @@ public class TodoServiceTests
             .Setup(m => m.GetTodosAsync())
             .ReturnsAsync
             (
-                new List<DataAccess.Todo>
+                new List<Todo>
                 {
-                    new DataAccess.Todo { Id = 1, Title = "Todo 1", Description = "Todo 1 Description", IsCompleted = false },
-                    new DataAccess.Todo { Id = 2, Title = "Todo 2", Description = "Todo 2 Description", IsCompleted = true },
-                    new DataAccess.Todo { Id = 3, Title = "Todo 3", Description = "Todo 3 Description", IsCompleted = false }
+                    new Todo { Id = 1, Title = "Todo 1", Description = "Todo 1 Description", IsCompleted = false },
+                    new Todo { Id = 2, Title = "Todo 2", Description = "Todo 2 Description", IsCompleted = true },
+                    new Todo { Id = 3, Title = "Todo 3", Description = "Todo 3 Description", IsCompleted = false }
                 }
             );
 
@@ -107,7 +112,7 @@ public class TodoServiceTests
     {
         // Arrange
         var fixture = new Fixture(); // <- AutoFixture
-        var autoTodos = fixture.CreateMany<DataAccess.Todo>(30);
+        var autoTodos = fixture.CreateMany<Todo>(30);
 
         // proper way of outputting any info from tests
         _outputHelper.WriteLine($"AutoFixture generated {autoTodos.Count()} todos");
@@ -116,7 +121,7 @@ public class TodoServiceTests
             _outputHelper.WriteLine($"Todo: {todo}");
         }
 
-        var config = new MapperConfiguration(cfg => cfg.CreateMap<DataAccess.Todo, TodoDto>());
+        var config = new MapperConfiguration(cfg => cfg.CreateMap<Todo, TodoDto>());
         var mapper = new Mapper(config);
 
         var todoRepositoryMock = new Mock<ITodoRepository>(); // <- Mock

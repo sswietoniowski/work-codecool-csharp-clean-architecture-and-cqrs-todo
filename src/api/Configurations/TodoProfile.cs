@@ -1,8 +1,8 @@
 using AutoMapper;
 
-using Todo.Api.Dtos;
+using TodoApp.Api.Dtos;
 
-namespace Todo.Api.Configurations;
+namespace TodoApp.Api.Configurations;
 
 public class TodoProfile : Profile
 {

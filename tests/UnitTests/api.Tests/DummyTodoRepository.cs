@@ -1,14 +1,14 @@
-﻿using Todo.Api.DataAccess;
+﻿using TodoApp.Api.DataAccess;
 
-namespace Todo.Api.Tests;
+namespace TodoApp.Api.Tests;
 
 internal class DummyTodoRepository : ITodoRepository
 {
-    private List<DataAccess.Todo> _todos = new List<DataAccess.Todo>()
+    private readonly List<Todo> _todos = new List<Todo>()
     {
-        new DataAccess.Todo { Id = 1, Title = "Todo 1", Description = "Todo 1 Description", IsCompleted = false },
-        new DataAccess.Todo { Id = 2, Title = "Todo 2", Description = "Todo 2 Description", IsCompleted = true },
-        new DataAccess.Todo { Id = 3, Title = "Todo 3", Description = "Todo 3 Description", IsCompleted = false },
+        new Todo { Id = 1, Title = "Todo 1", Description = "Todo 1 Description", IsCompleted = false },
+        new Todo { Id = 2, Title = "Todo 2", Description = "Todo 2 Description", IsCompleted = true },
+        new Todo { Id = 3, Title = "Todo 3", Description = "Todo 3 Description", IsCompleted = false },
     };
 
     public DummyTodoRepository()
@@ -16,22 +16,22 @@ internal class DummyTodoRepository : ITodoRepository
 
     }
 
-    public Task<DataAccess.Todo> CreateTodoAsync(DataAccess.Todo todo)
+    public Task<Todo> CreateTodoAsync(Todo todo)
     {
         throw new NotImplementedException();
     }
 
-    public Task<DataAccess.Todo?> GetTodoAsync(int id)
+    public Task<Todo?> GetTodoAsync(int id)
     {
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<DataAccess.Todo>> GetTodosAsync()
+    public Task<IEnumerable<Todo>> GetTodosAsync()
     {
         return Task.FromResult(_todos.AsEnumerable());
     }
 
-    public Task<DataAccess.Todo?> UpdateTodoAsync(int id, DataAccess.Todo todo)
+    public Task<Todo?> UpdateTodoAsync(int id, Todo todo)
     {
         throw new NotImplementedException();
     }

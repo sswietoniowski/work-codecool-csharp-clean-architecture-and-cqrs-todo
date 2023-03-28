@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace Todo.Api.DataAccess.Migrations.Mssql
+namespace TodoApp.Api.DataAccess.Migrations.Mssql
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration

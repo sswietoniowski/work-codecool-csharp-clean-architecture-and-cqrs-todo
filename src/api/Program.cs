@@ -4,10 +4,10 @@ using Polly;
 
 using Microsoft.EntityFrameworkCore;
 
-using Todo.Api.Configurations;
-using Todo.Api.DataAccess;
-using Todo.Api.Dtos;
-using Todo.Api.Services;
+using TodoApp.Api.Configurations;
+using TodoApp.Api.DataAccess;
+using TodoApp.Api.Dtos;
+using TodoApp.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

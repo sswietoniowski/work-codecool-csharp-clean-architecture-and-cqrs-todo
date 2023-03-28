@@ -1,9 +1,9 @@
 using AutoMapper;
 
-using Todo.Api.DataAccess;
-using Todo.Api.Dtos;
+using TodoApp.Api.DataAccess;
+using TodoApp.Api.Dtos;
 
-namespace Todo.Api.Services;
+namespace TodoApp.Api.Services;
 
 public class TodoService : ITodoService
 {
@@ -18,11 +18,11 @@ public class TodoService : ITodoService
 
     public async Task<TodoDto> CreateTodoAsync(TodoForCreationDto todoForCreation)
     {
-        var todo = _mapper.Map<TodoForCreationDto, DataAccess.Todo>(todoForCreation);
+        var todo = _mapper.Map<TodoForCreationDto, Todo>(todoForCreation);
 
         await _todoRepository.CreateTodoAsync(todo);
 
-        return _mapper.Map<DataAccess.Todo, TodoDto>(todo);
+        return _mapper.Map<Todo, TodoDto>(todo);
     }
 
     public async Task<TodoDto?> GetTodoAsync(int id)
@@ -34,20 +34,20 @@ public class TodoService : ITodoService
             return null;
         }
 
-        return _mapper.Map<DataAccess.Todo, TodoDto>(todo);
+        return _mapper.Map<Todo, TodoDto>(todo);
     }
 
     public async Task<IEnumerable<TodoDto>> GetTodosAsync()
     {
         var todos = await _todoRepository.GetTodosAsync();
 
-        return _mapper.Map<IEnumerable<DataAccess.Todo>, IEnumerable<TodoDto>>(todos);
+        return _mapper.Map<IEnumerable<Todo>, IEnumerable<TodoDto>>(todos);
     }
 
     public async Task<TodoDto?> UpdateTodoAsync(int id, TodoForUpdateDto todoForUpdate)
     {
 
-        var todoToBeUpdated = _mapper.Map<DataAccess.Todo>(todoForUpdate);
+        var todoToBeUpdated = _mapper.Map<Todo>(todoForUpdate);
         
         var todo = await _todoRepository.UpdateTodoAsync(id, todoToBeUpdated);
 
@@ -56,7 +56,7 @@ public class TodoService : ITodoService
             return null;
         }
 
-        return _mapper.Map<DataAccess.Todo, TodoDto>(todo);
+        return _mapper.Map<Todo, TodoDto>(todo);
     }
 
     public async Task<bool> DeleteTodoAsync(int id) =>
