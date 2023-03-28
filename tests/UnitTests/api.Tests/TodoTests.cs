@@ -38,7 +38,7 @@ public class TodoTests
     [Theory]
     //[InlineData("Title #1", null)]
     //[InlineData("Title #2", "Description ... #2")]
-    [MemberData(nameof(TestData), parameters: 2)]
+    [MemberData(nameof(TestData))]
     public void Constructor_WhenCreatedWithInitializationBlock_ShouldBeInitialized(string title, string? description)
     {
         // Arrange
