@@ -56,7 +56,8 @@ app.MapGet("/api/todos", async (ITodoService todoService) =>
     return Results.Ok(todos);
 })
     .WithName("GetTodos")
-    .Produces<IEnumerable<TodoDto>>(StatusCodes.Status200OK);
+    .Produces<IEnumerable<TodoDto>>(StatusCodes.Status200OK)
+    .ProducesProblem(StatusCodes.Status500InternalServerError);
 
 app.MapPost("/api/todos", async (ITodoService todoService, TodoForCreationDto todoDto) =>
 {
@@ -66,7 +67,7 @@ app.MapPost("/api/todos", async (ITodoService todoService, TodoForCreationDto to
 })
     .WithName("CreateTodo")
     .Produces<TodoDto>(StatusCodes.Status201Created)
-    .ProducesValidationProblem() // Validation errors, not yet implemented
+    .ProducesValidationProblem()
     .ProducesProblem(StatusCodes.Status500InternalServerError);
 
 const int MAX_RETRIES = 7;
