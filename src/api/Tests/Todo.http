@@ -8,7 +8,20 @@ POST http://localhost:5000/api/todos HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Todo Docker",
-    "description": "Todo from Docker",
+    "title": "Todo MediatR",
+    "description": "Todo with MediatR",
     "isCompleted": true
 }
+
+### Update an existing todo
+PUT http://localhost:5000/api/todos/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Todo 1",
+    "description": "Todo 1 Description (UPDATED)",
+    "isCompleted": true
+}
+
+### Delete an existing todo
+DELETE http://localhost:5000/api/todos/4 HTTP/1.1

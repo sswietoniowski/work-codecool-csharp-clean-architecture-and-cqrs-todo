@@ -2,7 +2,7 @@
 
 using TodoApp.Application.Dtos;
 
-namespace TodoApp.Application.Features.Todo.Requests.Queries;
+namespace TodoApp.Application.Features.Todos.Requests.Queries;
 
 public record GetTodosQuery : IRequest<IEnumerable<TodoDto>>
 {
