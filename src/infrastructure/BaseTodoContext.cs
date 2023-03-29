@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
 using TodoApp.Core;
+using TodoApp.Infrastructure.Configurations.Entities;
 
 namespace TodoApp.Infrastructure;
 
@@ -16,10 +17,6 @@ public abstract class BaseTodoContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Todo>().HasData(
-            new Todo { Id = 1, Title = "Todo 1", Description = "Todo 1 Description", IsCompleted = false },
-            new Todo { Id = 2, Title = "Todo 2", Description = "Todo 2 Description", IsCompleted = true },
-            new Todo { Id = 3, Title = "Todo 3", Description = "Todo 3 Description", IsCompleted = false }
-        );
+        modelBuilder.ApplyConfiguration(new TodoConfiguration());
     }
 }
