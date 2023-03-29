@@ -1,14 +1,9 @@
-using MediatR;
-
 using Microsoft.EntityFrameworkCore;
 
 using Polly;
 
 using TodoApp.Api;
 using TodoApp.Application;
-using TodoApp.Application.Dtos;
-using TodoApp.Application.Features.Todos.Requests.Commands;
-using TodoApp.Application.Features.Todos.Requests.Queries;
 using TodoApp.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
