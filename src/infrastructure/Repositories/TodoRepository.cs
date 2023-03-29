@@ -2,7 +2,10 @@
 
 using Microsoft.EntityFrameworkCore;
 
-namespace TodoApp.Api.DataAccess;
+using TodoApp.Application.Contracts.Repositories;
+using TodoApp.Core;
+
+namespace TodoApp.Infrastructure.Repositories;
 
 public class TodoRepository : ITodoRepository
 {

@@ -1,5 +1,7 @@
 ﻿using FluentAssertions;
 
+using TodoApp.Core;
+
 namespace TodoApp.Api.Tests;
 
 public class TodoTests
@@ -10,7 +12,7 @@ public class TodoTests
         // Arrange
 
         // Act
-        var todo = new DataAccess.Todo();
+        var todo = new Todo();
 
         // Assert
         Assert.False(todo.IsCompleted);
@@ -22,7 +24,7 @@ public class TodoTests
         // Arrange
 
         // Act
-        var todo = new DataAccess.Todo();
+        var todo = new Todo();
 
         // Assert with FluentAssertions
         todo.IsCompleted.Should().BeFalse();
@@ -44,7 +46,7 @@ public class TodoTests
         // Arrange
 
         // Act
-        var todo = new DataAccess.Todo
+        var todo = new Todo
         {
             Title = title,
             Description = description

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace TodoApp.Api.DataAccess;
+namespace TodoApp.Infrastructure;
 
 public class SqliteTodoContext : BaseTodoContext
 {

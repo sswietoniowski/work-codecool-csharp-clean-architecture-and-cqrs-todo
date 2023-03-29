@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace TodoApp.Api.DataAccess.Migrations.Sqlite
+namespace TodoApp.Infrastructure.Migrations.Sqlite
 {
     [DbContext(typeof(SqliteTodoContext))]
     [Migration("20221212110044_InitialMigration")]

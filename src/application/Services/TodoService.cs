@@ -1,9 +1,10 @@
 using AutoMapper;
 
-using TodoApp.Api.DataAccess;
-using TodoApp.Api.Dtos;
+using TodoApp.Application.Contracts.Repositories;
+using TodoApp.Application.Dtos;
+using TodoApp.Core;
 
-namespace TodoApp.Api.Services;
+namespace TodoApp.Application.Services;
 
 public class TodoService : ITodoService
 {

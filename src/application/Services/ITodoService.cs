@@ -1,6 +1,6 @@
-using TodoApp.Api.Dtos;
+using TodoApp.Application.Dtos;
 
-namespace TodoApp.Api.Services;
+namespace TodoApp.Application.Services;
 
 public interface ITodoService
 {

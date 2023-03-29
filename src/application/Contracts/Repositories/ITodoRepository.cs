@@ -1,4 +1,6 @@
-﻿namespace TodoApp.Api.DataAccess;
+﻿using TodoApp.Core;
+
+namespace TodoApp.Application.Contracts.Repositories;
 
 public interface ITodoRepository
 {

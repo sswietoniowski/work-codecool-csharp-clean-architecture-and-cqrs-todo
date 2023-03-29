@@ -7,10 +7,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 using Moq;
 
-using TodoApp.Api.Configurations;
-using TodoApp.Api.DataAccess;
-using TodoApp.Api.Dtos;
-using TodoApp.Api.Services;
+using TodoApp.Application.Contracts.Repositories;
+using TodoApp.Application.Dtos;
+using TodoApp.Application.Profiles;
+using TodoApp.Application.Services;
+using TodoApp.Core;
+using TodoApp.Infrastructure;
+using TodoApp.Infrastructure.Repositories;
 
 using Xunit.Abstractions;
 

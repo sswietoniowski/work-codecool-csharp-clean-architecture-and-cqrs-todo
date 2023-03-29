@@ -1,4 +1,5 @@
-﻿using TodoApp.Api.DataAccess;
+﻿using TodoApp.Application.Contracts.Repositories;
+using TodoApp.Core;
 
 namespace TodoApp.Api.Tests;
 
