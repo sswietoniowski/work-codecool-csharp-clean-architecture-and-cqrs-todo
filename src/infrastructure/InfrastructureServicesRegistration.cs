@@ -2,8 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using TodoApp.Api.Configurations;
 using TodoApp.Application.Contracts.Repositories;
+using TodoApp.Infrastructure.Configurations;
 using TodoApp.Infrastructure.Repositories;
 
 namespace TodoApp.Infrastructure;
